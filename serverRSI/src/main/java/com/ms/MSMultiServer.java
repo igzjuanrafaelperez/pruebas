@@ -1,4 +1,4 @@
-package com.kk;
+package com.ms;
 
 /*
  * Copyright (c) 1995, 2013, Oracle and/or its affiliates. All rights reserved.
@@ -34,11 +34,11 @@ package com.kk;
 import java.net.*;
 import java.io.*;
 
-public class KKMultiServer {
+public class MSMultiServer {
     public static void main(String[] args) throws IOException {
 
         if (args.length != 1) {
-            System.err.println("Usage: java KKMultiServer <port number>");
+            System.err.println("Usage: java MSMultiServer <port number>");
             System.exit(1);
         }
 

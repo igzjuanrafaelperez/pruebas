@@ -1,4 +1,4 @@
-package com.kk;
+package com.ms;
 
 /*
  * Copyright (c) 1995, 2013, Oracle and/or its affiliates. All rights reserved.
@@ -34,11 +34,11 @@ package com.kk;
 import java.net.*;
 import java.io.*;
 
-public class KKMultiServerThread extends Thread {
+public class MSMultiServerThread extends Thread {
     private Socket socket = null;
 
-    public KKMultiServerThread(Socket socket) {
-        super("KKMultiServerThread");
+    public MSMultiServerThread(Socket socket) {
+        super("MSMultiServerThread");
         this.socket = socket;
     }
 
@@ -51,7 +51,7 @@ public class KKMultiServerThread extends Thread {
                                 socket.getInputStream()));
         ) {
             String inputLine, outputLine;
-            KKProtocol kkp = new KKProtocol();
+            MSProtocol kkp = new MSProtocol();
             outputLine = kkp.processInput(null);
             out.println(outputLine);
 

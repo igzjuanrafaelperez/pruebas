@@ -1,4 +1,4 @@
-package com.kk;
+package com.ms;
 
 /*
  * Copyright (c) 1995, 2013, Oracle and/or its affiliates. All rights reserved.
@@ -34,7 +34,7 @@ package com.kk;
 import java.io.*;
 import java.net.*;
 
-public class KKClient {
+public class MSClient {
     public static void main(String[] args) throws IOException {
 
         if (args.length != 2) {
