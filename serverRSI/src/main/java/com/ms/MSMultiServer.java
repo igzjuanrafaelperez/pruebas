@@ -47,7 +47,7 @@ public class MSMultiServer {
 
         try (ServerSocket serverSocket = new ServerSocket(portNumber)) {
             while (listening) {
-                new KKMultiServerThread(serverSocket.accept()).start();
+                new MSMultiServerThread(serverSocket.accept()).start();
             }
         } catch (IOException e) {
             System.err.println("Could not listen on port " + portNumber);
