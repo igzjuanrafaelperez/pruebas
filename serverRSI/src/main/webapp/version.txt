@@ -1,0 +1,4 @@
+version: ##project.version##
+commit: ##git.commit.id.abbrev##
+commit-date: ##git.commit.date##
+build-date: ##buildDate##

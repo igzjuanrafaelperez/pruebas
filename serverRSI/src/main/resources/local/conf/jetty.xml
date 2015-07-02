@@ -1,0 +1,16 @@
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="localJPA" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg></Arg>
+        <Arg>ACTIVEMBDS</Arg>
+        <Arg>
+            <New class="oracle.jdbc.pool.OracleDataSource">
+                <!--<New class="oracle.jdbc.OracleDriver">-->
+                <Set name="URL">jdbc:oracle:thin:@192.168.0.59:15210:SIEBPWD</Set>
+                <!--<Set name="DatabaseName">PSG16</Set>-->
+                <Set name="User">Inteyigenz</Set>
+                <Set name="Password">PreUsuLect</Set>
+                <Set name="connectionCachingEnabled">false</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>

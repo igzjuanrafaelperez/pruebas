@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="local" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>ACTIVEMBDS</jta-data-source>
+        <class>com.prosegur.persistence.entities.User</class>
+        <class>com.prosegur.persistence.entities.UserSession</class>
+        <class>com.prosegur.persistence.entities.Service</class>
+        <class>com.prosegur.persistence.entities.Image</class>
+        <class>com.prosegur.persistence.entities.Camera</class>
+        <class>com.prosegur.persistence.entities.Notification</class>
+        <class>com.prosegur.persistence.entities.Log</class>
+        <class>com.prosegur.persistence.entities.LastStatus</class>
+        <class>com.prosegur.persistence.entities.ThirdPartySession</class>
+        <class>persistence.LocalDateTimeConverter</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jtaDataSource" value="ACTIVEMBDS"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

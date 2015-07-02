@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <properties>
+        <property name="aplication">psg16_smart</property>
+        <property name="aplication.short">psg16</property>
+        <property name="log.dir">logs/</property>
+        <property name="log.pattern">%highlight{%d{d/M/yyyy HH:mm:ss.SSS} [${aplication.short}] %-5level %logger{36}.%M() @%L - %msg%n}{FATAL=bright red, ERROR=bright red,
+            WARN=yellow bold, INFO=black, DEBUG=green bold, TRACE=bright blue}
+        </property>
+        <property name="log.charset">UTF-8</property>
+    </properties>
+
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${log.pattern}"/>
+        </Console>
+        <RollingFile name="RollingFile" fileName="${log.dir}${aplication}.log"
+                     filePattern="${log.dir}${aplication}-%i.log">>
+            <PatternLayout pattern="${log.pattern}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+    </appenders>
+
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </loggers>
+</configuration>
