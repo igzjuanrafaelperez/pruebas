@@ -7,7 +7,7 @@ public class MSMultiServerThread extends Thread {
     private Socket socket = null;
 
     public MSMultiServerThread(Socket socket) {
-        super("MSMultiServerThread");
+        super("RSIMultiServerThread");
         this.socket = socket;
     }
 

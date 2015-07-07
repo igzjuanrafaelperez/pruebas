@@ -7,7 +7,7 @@ public class MSMultiServer {
     public static void main(String[] args) throws IOException {
 
         if (args.length != 1) {
-            System.err.println("Usage: java MSMultiServer <port number>");
+            System.err.println("Usage: java RSIMultiServer <port number>");
             System.exit(1);
         }
 

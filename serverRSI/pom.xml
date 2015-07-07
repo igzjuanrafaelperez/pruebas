@@ -26,8 +26,10 @@
         <!-- local weblogic server -->
         <oracleUsername>weblogic</oracleUsername>
         <oraclePassword>weblogic</oraclePassword>
-        <oracleServerUrl></oracleServerUrl>
+        <oracleServerUrl>t3://localhost:7001</oracleServerUrl>
         <oracleServerName>myserver</oracleServerName>
+        <!--<oracleMiddlewareHome>myserver</oracleMiddlewareHome>-->
+        <!--<oracleDomainHome>mydomain</oracleDomainHome>-->
 
         <oracle-jdbc.version>11.2.0.4</oracle-jdbc.version>
         <toplink.version>12.1.3-0-0</toplink.version>
