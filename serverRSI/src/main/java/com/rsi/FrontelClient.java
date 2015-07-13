@@ -10,13 +10,13 @@ import java.net.UnknownHostException;
 public class FrontelClient {
 
     // RSI host
-    public static final String HOST_INTELYGENZ = "pub.intelygenz.com";
+    public static final String HOST_INTELYGENZ = "192.168.0.59";
     // RSI port
     public static final int PORT_INTELYGENZ = 1556;
 
     // Frame characters
     public static final char ESC_FRAME_CHAR = (char) 0x1B;
-    public static final char END_FRAME_CHAR = (char) 0x3E;
+    public static final char END_FRAME_CHAR = (char) 0x03;
     public static final char SPACE_FRAME_CHAR = (char) 0x20;
 
     // Frame fields
@@ -24,14 +24,14 @@ public class FrontelClient {
     public static final String EVENT_FRAME_FIELD = "EVENT";
 
     // Frame char[]
-    public static final char[] END_FRAME_ARR = new char[]{ESC_FRAME_CHAR, END_FRAME_CHAR};
-    public static final char[] SPACE_FRAME_ARR = new char[]{ESC_FRAME_CHAR, SPACE_FRAME_CHAR};
+    public static final char[] END_FRAME_ARR = new char[]{END_FRAME_CHAR};
+    public static final char[] SPACE_FRAME_ARR = new char[]{SPACE_FRAME_CHAR};
     public static final String PANEL_SERIAL_NUMBER = "7899988444411108";
     public static final String CUSTOMER_ACOUNT = "500555";
 
     public static void main(String[] args) throws IOException {
 
-        String hostName = "0.0.0.0";
+        String hostName = HOST_INTELYGENZ;
         int portNumber = PORT_INTELYGENZ;
 
         try (
