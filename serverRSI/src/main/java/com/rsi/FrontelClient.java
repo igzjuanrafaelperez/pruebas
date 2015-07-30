@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 public class FrontelClient {
 
     // RSI host
-    public static final String HOST_INTELYGENZ = "192.168.0.59";
+    public static final String HOST_INTELYGENZ = "192.168.130.152";
     // RSI port
     public static final int PORT_INTELYGENZ = 1556;
 
